@@ -1,22 +1,31 @@
-*{
+* {
   padding: 0;
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.nav{
+html {
+  scroll-behavior: smooth;
+}
+
+.nav {
   display: flex;
   justify-content: space-between;
+  margin-top: 2rem;
   padding: 1.5rem 6rem;
   background-color: rgba(255, 255, 255, 0.5);
 }
-.logo{
+.logo {
   display: flex;
   align-items: center;
+  margin-top: -2rem;
+  margin-left: 5%;
   padding: 0.5rem;
 }
-
-
+nav li{
+  margin: 0 15px;
+  list-style-type: none;
+}
 .nav a::after {
   content: "";
   width: 0;
@@ -25,7 +34,7 @@
   position: absolute;
   bottom: -10px;
   left: 0;
-  transition:  0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .nav a:hover::after {
@@ -36,79 +45,24 @@
   text-decoration: none;
   color: rgb(145, 145, 145);
   padding: 0 10px;
-  position: relative; 
+  position: relative;
   font-size: 20px;
 }
 
-.logo h1{
+.logo h1 {
   color: rgb(146, 146, 146);
 }
-.nav-list{
+.nav-list {
   display: flex;
-  
   align-items: center;
-  
+  margin-top: -15px;
 }
-.nav-list ul{
+.nav-list ul {
   display: flex;
   justify-content: center;
   list-style: none;
 }
-.item{
-  margin: 0 15px;
-}
-.link{
-  text-decoration: none;
-  font-size: 1.5rem;
-  
-  color: #fff;
-  font-weight: 400;
-}
 
-
-.footer1{
-  box-shadow: 0px 3px 10px #464646;
-  padding: 1.5rem 6rem;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.whatsApp{
-  display: flex;
-  gap: 20px;
-}
-.Instagram{
-  display: flex;
-  gap: 20px;
-}
-.footer1 a{
-text-decoration: none;
-color: black;
-}
-
-
-.carousel {
-  position: relative;
-  max-width: 100%;
-  margin: auto;
-  overflow: hidden;
-}
-
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  min-width: 100%;
-  position: relative;
-  display: none;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-}
 
 .caption {
   position: absolute;
@@ -122,8 +76,6 @@ color: black;
   border-radius: 5px;
   text-align: center;
 }
-
-
 
 .dots {
   text-align: center;
@@ -143,7 +95,8 @@ color: black;
   transition: background-color 0.3s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
 }
 
@@ -151,74 +104,198 @@ color: black;
   display: block;
 }
 
-.primeiro{
+.primeiro {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 2rem;
-}
-.primeiro a{
-  text-decoration: none;
-  display: inline-block; 
-  background: #000; 
-  color: #fff; 
-  padding: 0.8rem 1.8rem;
-  border-radius: 40px; 
-  margin-top: 2rem; 
-  cursor: pointer;
-}
-.segundo{
-  padding: 10rem;
-}
-.segundo h2{
-  font-size: 45px;
-}
-.primeiro img{
-  width: 900px;
-}
-.faber img{
-  width: 200px;
-  padding: 10px;
-  border-radius: 20px;
-}
-.tilibra img{
-  width: 100px;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-.todo{
-  display: flex;
-  padding: 20px;
- justify-content: space-between;
-}
-.poduto1{
-  display: flex;
-}
-.cadernoimg{
-  width: 400px;
-}
-.cadernoc{
-  font-size: 2rem;
-  text-align: center;
-}
-.produtoimg{
-  width: 400px;
-}
-.produto2a{
-  text-align: center;
-  font: 2rem;
-}
-.todos-produtos{
-  display: flex;
   justify-content: space-between;
 }
-.produto2img{
-  width: 400px;
+
+.primeiro a {
+  text-decoration: none;
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  border-radius: 40px;
+  margin-top: 2rem;
+  cursor: pointer;
 }
-.poduto3a{
+.segundo {
+  padding: 10rem;
+}
+.segundo h2 {
+  font-size: 45px;
+}
+.primeiro video {
+  width: 1000px;
+  margin: 4rem;
+}
+
+
+ .imagens{
+  display: flex;
+  justify-content: space-around;
+ }
+ .proporcional-container {
+  display: flex;
+  justify-content: center; 
+  gap: 40px; 
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.texto {
+  flex: 1;
+  max-width: 500px; 
+}
+
+.texto h2 {
+  font-size: 3em;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.texto h2 span {
+  color: #0056b3;
+}
+
+.texto p {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.ver-mais {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 70px;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.ver-mais:hover {
+  background-color: #333;
+}
+
+.icones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 10px; 
+  align-items: center;
+  justify-items: center; 
+}
+ .icones-grid .icone:hover{
+  border: orange solid 2px;
+  color: orange;
+  transition: 0.3s;
+}
+
+.icone {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px; 
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.2em; 
 }
-.produto4img{
-  width: 400px;
+
+.icone i {
+  max-width: 60px; 
+  margin-bottom: 30px;
+}
+
+.icone p {
+  font-size: 1.1em;
+  color: #333;
+  font-weight: bold;
+}
+footer {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  background-color: #000;
+  height: 370px;
+  width: 100vw; 
+  margin: 0; 
+  padding: 20px 0; 
+  box-sizing: border-box;
+  position: relative; 
+}
+
+footer div {
+  display: grid;
+  justify-items: center;
+  color: #fff;
+}
+
+footer div h1 {
+  margin-bottom: 10px;
+}
+
+footer div p,
+footer div a {
+  margin-bottom: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+footer img {
+  max-width: 600px;
+  border-radius: 2px;
+}
+
+footer button {
+  position: absolute;
+  top: -30px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  border: none;
+  background-color: #e7e7e7;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10; 
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+footer button img {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+}
+
+
+
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column; 
+    height: auto; 
+    padding: 30px;
+  }
+
+  footer img {
+    max-width: 100%; 
+    margin: 20px 0;
+  }
+
+  footer button {
+    top: -25px; 
+    width: 40px;
+    height: 40px;
+  }
+
+  footer button img {
+    width: 20px;
+    height: 20px;
+  }
 }

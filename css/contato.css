@@ -1,0 +1,186 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    background: url(../img/aa.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 1.5rem 6rem;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-top: -2rem;
+    margin-left: 5%;
+    padding: 0.5rem;
+  }
+  
+  .nav a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .nav a:hover::after {
+    width: 100%;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 0 10px;
+    position: relative;
+    font-size: 20px;
+  }
+  
+  .logo h1 {
+    color: rgb(146, 146, 146);
+  }
+  .nav-list {
+    display: flex;
+    align-items: center;
+    margin-top: -15px;
+  }
+  .nav-list ul {
+    display: flex;
+    list-style: none;
+  }
+  .item {
+    margin: 0 15px;
+  }
+
+  form .enviar input{
+    background: #000000;
+    color: white;
+    width: 37rem;
+  }
+
+  .formulario{
+    margin-top: 6rem;
+  }
+section.formulario{
+    padding: 80px 4%;
+    background: white;
+    border-radius: 10px;
+    flex: 1;
+}
+h1{
+    font-size: 5rem;
+}
+form{
+  max-width: 500px;
+  margin: 0; 
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 30px;
+}
+form input{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    color: black;
+    font-size: 18px;
+    padding: 2rem ;
+
+
+}
+input[type="text"], input[type="email"], textarea {
+    border-bottom: 1px solid #ccc;
+
+}
+textarea:focus {
+    outline: none; 
+}
+input::placeholder,
+textarea::placeholder {
+    color: #000000; 
+    opacity: 1; 
+}
+form input, form textarea{
+    color: #000000;
+}
+form textarea{
+    resize: none;
+    width: 560px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: #ffffff;
+    font-size: 18px;
+    padding: 1rem 
+}
+.fale {
+  height: 100%;
+  width: 800px;
+    background: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 9rem;
+}
+.info{
+    margin-bottom: 60px; 
+    margin-right: 20px; 
+
+}
+.info a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.info p{
+    margin-top: 1.5rem;
+}
+.info i, span{
+    font-size: 20px;
+    
+}
+
+
+.redes p{
+    font-size: 15px;
+}
+.redes{
+    margin: 2rem;
+}
+.redes h2{
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1.5rem;
+}
+
+.todo-contato{
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  padding: 0 9rem;
+}
+
+
+
+  .atendimento div {
+    display: flex;
+    gap: 20px;
+  }
+  .atendimento div a {
+    margin-top: 22px;
+  }
+  .atendimento p {
+    cursor: pointer;
+  } 

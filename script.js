@@ -1,25 +1,70 @@
-let slideIndex = 0;
-const slides = document.querySelectorAll('.slide');
-
-function moveSlide(n) {
-    showSlide(slideIndex += n);
+async function listarProdutos() {
+  try {
+    const response = await fetch('http://localhost:3000/api/produtos');
+    if (!response.ok) {
+      throw new Error('Erro ao buscar produtos');
+    }
+    const produtos = await response.json();
+    return produtos;
+  } catch (error) {
+    console.error('Erro:', error);
+    return [];
+  }
 }
 
-function showSlide(n) {
-    if (n >= slides.length) {
-        slideIndex = 0;
-    }
-    if (n < 0) {
-        slideIndex = slides.length - 1;
-    }
+async function mostrarProdutos() {
+  const produtos = await listarProdutos();
+  const itensPorPagina = 12;
+  let paginaAtual = 1;
 
-    slides.forEach((slide, index) => {
-        slide.style.display = (index === slideIndex) ? 'block' : 'none';
+  function renderizarProdutos() {
+    const cardLista = document.getElementById('card-lista');
+    cardLista.innerHTML = '';
+
+    const inicio = (paginaAtual - 1) * itensPorPagina;
+    const fim = inicio + itensPorPagina;
+    const produtosPagina = produtos.slice(inicio, fim);
+
+    produtosPagina.forEach(produto => {
+      const li = document.createElement('li');
+      li.className = 'card-item';
+      li.innerHTML = `
+        <a class="card-link" href="detalhes.html?id=${produto.id}">
+          <img class="card-imagem" src="${produto.imagem}" alt="${produto.titulo}">
+          <p class="item">${produto.item}</p>
+          <h2 class="card-titulo">${produto.titulo}</h2>
+          <button class="card-button"><i class="bi bi-arrow-right"></i></button>
+        </a>
+      `;
+      cardLista.appendChild(li);
     });
+
+    atualizarBotoesPaginacao();
+  }
+
+  function atualizarBotoesPaginacao() {
+    const paginacaoContainer = document.getElementById('paginacao');
+    paginacaoContainer.innerHTML = '';
+    const totalPaginas = Math.ceil(produtos.length / itensPorPagina);
+
+    for (let i = 1; i <= totalPaginas; i++) {
+      const botaoPagina = document.createElement('button');
+      botaoPagina.className = 'page-button';
+      botaoPagina.textContent = i;
+      botaoPagina.addEventListener('click', () => {
+        paginaAtual = i;
+        renderizarProdutos();
+      });
+
+      if (i === paginaAtual) {
+        botaoPagina.classList.add('active');
+      }
+
+      paginacaoContainer.appendChild(botaoPagina);
+    }
+  }
+
+  renderizarProdutos();
 }
 
-showSlide(slideIndex);
-
-setInterval(function() {
-    moveSlide(1);
-}, 10000);
+mostrarProdutos();
