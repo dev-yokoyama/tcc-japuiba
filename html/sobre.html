@@ -5,15 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="stylesheet" href="../css/sobre.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
 </head>
 
-<body id="home">
+<body>
   <header id="home" class="azul">
     <nav class="nav">
         <div class="logo">
-            <h1>logo</h1>
+            <img src="../img/logojapuiba-removebg-preview.png" alt="">
         </div>
-
+        <div id="pesquisa">
+          <div class="input-group">
+            <div class="input-icon">
+              <i class="bi bi-search"></i>
+            </div>
+            <input type="text" id="search" class="input-field" placeholder="Pesquisar">
+          </div>
+          <ul class="items">
+            <li class="item">
+              <div class="item-imagem">
+                <img src="./img/produto1.png" alt="Produto">
+              </div>
+              <div class="item-content">
+                <h2 class="item-title">Produto 1</h2>
+                <p class="item-subtitle">Subtítulo</p>
+                <p class="item-description">Descrição do produto</p>
+              </div>
+            </li>
+          </ul>
+        </div>
         <ul class="nav-list">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="#">Sobre</a></li>
@@ -40,6 +60,7 @@
     <h1 id="titulo-h">Historico</h1>
 
     <section class="historia-conteudo">
+      
       <section class="primeiro-h">
         <div>
           <h2>1965 - 1980</h2>
@@ -70,7 +91,7 @@
       </section>
     </section>
   </section>
-
+ 
   <footer>
     <div>
       <h1>Mapa do site</h1>
@@ -91,6 +112,7 @@
       <a href="#home"> <img src="../img/chevron-up.svg" alt=""></a>
     </button>
   </footer>
+  <script src="../index.js"></script>
 </body>
 
 </html>

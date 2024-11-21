@@ -32,11 +32,9 @@ async function obterDetalhesProduto(id) {
     `;
   }
   
-  // Pega o ID do produto na URL
   const urlParams = new URLSearchParams(window.location.search);
   const produtoId = urlParams.get('id');
   
-  // Carrega os detalhes do produto com base no ID
   if (produtoId) {
     obterDetalhesProduto(produtoId);
   } else {

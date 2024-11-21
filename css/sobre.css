@@ -14,21 +14,22 @@ html {
 .nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
-  padding: 1.5rem 6rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center; 
+  margin: 0;
+  padding: 0; 
+  position: relative;
+  gap: 16px;
+  flex-wrap: wrap;
 }
-.logo {
-  display: flex;
-  align-items: center;
-  margin-top: -2rem;
-  margin-left: 5%;
-  padding: 0.5rem;
+
+.logo img {
+  max-width: 250px;
 }
-nav li{
+nav li {
   margin: 0 15px;
   list-style-type: none;
 }
+
 .nav a::after {
   content: "";
   width: 0;
@@ -52,21 +53,52 @@ nav li{
   font-size: 20px;
 }
 
-.logo h1 {
-  color: rgb(146, 146, 146);
-}
 .nav-list {
   display: flex;
-  align-items: center;
-  margin-top: -15px;
-}
-.nav-list ul {
-  display: flex;
-  justify-content: center;
+  gap: 16px;
   list-style: none;
+  flex-wrap: wrap; 
 }
 
 
+.input-group {
+  display: flex; 
+  align-items: center; 
+  background-color: #fafafa; 
+  padding: 10px;
+  border-radius: 54px;
+  gap: 8px;
+  flex: 1; 
+  max-width: 50px;
+  min-width: 950px;
+  
+}
+
+.input-field {
+  flex: 1; 
+  border: none;
+  background-color: transparent;
+  font-size: 16px; 
+}
+
+.input-field:focus {
+  outline: none; 
+}
+
+.input-icon {
+  width: 32px; 
+  height: 32px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  color: #ffffff; 
+  background: #0f1357;
+}
+
+#search::placeholder {
+  color: #0f1357; 
+}
 .texto {
   display: flex;
   justify-content: center;
@@ -75,6 +107,7 @@ nav li{
   margin-top: 80px;
   gap: 300px;
 }
+
 .texto img {
   width: 550px;
   margin-left: 30px;
@@ -91,6 +124,7 @@ nav li{
   margin: -180px 0 0 1050px;
   border-radius: 50%;
 }
+
 .texto::before {
   content: "";
   display: inline-block;
@@ -110,6 +144,13 @@ nav li{
   color: #cccccc;
   font-size: 23px;
   margin: 15px 0 45px 0;
+}
+.primeiro-h img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 20px;
 }
 .texto section a {
   color: #cccccc;
@@ -155,6 +196,13 @@ nav li{
   gap: 30.5%;
   margin-top: 80px;
 }
+.segundo-h img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 20px;
+}
 .terceiro-h {
   display: flex;
   justify-content: center;
@@ -162,6 +210,77 @@ nav li{
   gap: 32.5%;
   margin-top: 80px;
 }
+.terceiro-h img{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 20px;
+}
+.missao-visao{
+  padding: 50px 20px;
+  background-color: #f8f8f8; 
+  font-family: 'Poppins', sans-serif;
+}
+
+.missao-visaoh1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 20px;
+  transition: transform  0.5s;
+}
+.item:hover{
+  transform: scale(1.1);
+}
+
+.item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.circulo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd;
+  flex-shrink: 0;
+}
+
+.missaovisao {
+  flex: 1;
+  background-color: #fff; 
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.missaovisao h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.missaovisao p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
 footer {
   display: flex;
   justify-content: space-around; 
