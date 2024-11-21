@@ -156,9 +156,10 @@ nav li {
 .grid-item p{
   padding: 10px;
   font-weight: bold;
-  color: rgb(255, 255, 255);
+  color: white;
   grid-column: 1;
   grid-row: 2;
+  font-size: 20px;
   align-self: end;
 }
 

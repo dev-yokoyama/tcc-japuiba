@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 
-app.get('/api/produtos', (req, res) => {
+app.get('api/produtos', (req, res) => {
   db.all('SELECT * FROM produtos6', (err, rows) => {
     if (err) {
       return res.status(500).json({ error: err.message });
