@@ -27,9 +27,11 @@
                 <img src="./img/produto1.png" alt="Produto">
               </div>
               <div class="item-content">
+                <a href="detalhes.html?id=${produto.id}">
                 <h2 class="item-title">Produto 1</h2>
                 <p class="item-subtitle">Subtítulo</p>
                 <p class="item-description">Descrição do produto</p>
+              </a>
               </div>
             </li>
           </ul>
@@ -43,6 +45,23 @@
     </nav>
 </header>
 
+  
+    <div class="filter">
+      <div class="tituloedescricao">
+        <h2>Produtos mais destacados</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia sunt dolorem doloribus, 
+           earum facere quibusdam <br> necessitatibus? Dicta autem necessitatibus laudantium.</p>
+      </div>
+    
+      <div id="filtros">
+        <img src="../img/categoria.webp" alt="" class="filtro" data-categoria="Marcador"></img>
+        <img src="../img/pexels-punttim-53874.jpg" class="filtro" data-categoria="Caneta"></img>
+        <img src="../img/pexels-pixabay-247650.jpg" class="filtro" data-categoria="Caneca"></img>
+        <img src="../img/pexels-pixabay-220502.jpg" class="filtro" data-categoria="Lápis"></img>
+        <img src="../img/mochila.jpeg" class="filtro" data-categoria="Mochila"></img>
+        <button src="" class="filtro" data-categoria="Todos"><i class="bi bi-filter"></i></button>
+      </div>
+      
   <div class="pagina">
   
  <div class="container">
@@ -78,7 +97,7 @@
     </button>
   </footer>
      <script src="../script.js"></script>
-     <script src="../index.js"></script>
+     <script src="../js/inicio.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

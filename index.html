@@ -1,166 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papelaria Japuiba</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="icon" href="./img/logotipo-papelaria-japuiba (1).png" type="image/x-icon">
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animação Japuiba</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fff;
+      overflow: hidden;
+    }
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-  
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: scaleRotate 3s ease-in-out forwards;
+    }
 
+    .logo::before {
+      content: '';
+      width: 60%;
+      height: 60%;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    @keyframes scaleRotate {
+      0% {
+        transform: scale(0) ;
+      }
+      50% {
+        transform: scale(1.5) ;
+      }
+      100% {
+        transform: scale(1) ;
+      }
+     
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
+<body>
+  <div class="logo"><img src="./img/logojapuiba-removebg-preview.png" alt=""></div>
 
-<body id="home">
-  <header>
-    <nav class="nav">
-      <div class="logo">
-        <img src="./img/logojapuiba-removebg-preview.png" alt="Logo">
-      </div>
-      <div id="pesquisa">
-        <div class="input-group">
-          <div class="input-icon">
-            <i class="bi bi-search"></i>
-          </div>
-          <input type="text" id="search" class="input-field" placeholder="Pesquisar">
-        </div>
-        <ul class="items">
-          <li class="item">
-            <div class="item-imagem">
-              <img src="./img/produto1.png" alt="Produto">
-            </div>
-            <div class="item-content">
-              <h2 class="item-title">Produto 1</h2>
-              <p class="item-subtitle">Subtítulo</p>
-              <p class="item-description">Descrição do produto</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <ul class="nav-list">
-        <li><a href="">Inicio</a></li>
-        <li><a href="./html/sobre.html">Sobre</a></li>
-        <li><a href="./html/contato.html">Contato</a></li>
-        <li><a href="./html/produtos.html">Produtos</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./img/testea.PNG" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="./img/banner.PNG" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="./img/banner2.PNG" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
-
-
-<section>
-  <div class="categorias">
-    <div>
-    <img src="./img/categoria.webp" alt="">
-    <p>Marcadores</p>
-  </div>
-  <div>
-    <img src="./img/categoria2.jpeg" alt="">
-    <p>Cadernos</p>
-  </div>
-  <div>
-    <img src="./img/categorias3.jpg" alt="">
-    <p>Presentes</p>
-  </div>
-  <div>
-    <img src="./img/categorias4.jpg" alt="">
-    <p>Copos</p>
-  </div>
-  <div>
-    <img src="./img/categorias5.jpg" alt="">
-    <p>Decoração</p>
-  </div>
-  <div>
-    <img src="./img/categorias7.jpg" alt="">
-    <p>Almofadas</p>
-  </div>
-  </div>
-</section>
- 
-
-  <div class="pagina">
-   <div id="paginacao" class="pagination-buttons"></div>
- </div>
- </div>
- </div>
-
-  <section class="grid">
-    <div class="grid-item">
-      <img class="grid1" src="./img/caderno.webp" alt="2025">
-      <p >Usar a criatividade é genial</p>
-    </div>
-    <div class="grid-item">
-      <img class="grid2" src="./img/canetas.jpg" alt="Stabilo">
-      <p >Escreva a sua historia</p>
-    </div>
-    <div class="grid-item">
-      <img class="grid2" src="./img/presente.jpg" alt="Stabilo">
-      <p >Presenteia as pessoas que voce ama</p>
-    </div>
-    <div class="grid-item">
-      <img class="grid2" src="./img/mochila.jpeg" alt="Cadernos">
-      <p>Guarde suas ideias</p>
-    </div>
-    <div class="grid-item">
-      <img class="grid2" src="./img/marcador.jpg" alt="Cadernos">
-      <p >Marca as suas metas</p>
-    </div>
-</section>
-
-  <footer>
-    <div>
-      <h1>Mapa do site</h1>
-      <a href="#home">Inicio</a>
-      <a href="./html/sobre.html">Sobre</a>
-      <a href="./html/produtos.html">Produtos</a>
-      <a href="./html/contato.html">Contato</a>
-    </div>
-    <img src="./img/Captura de Tela (145).png" alt="Mapa">
-    <div>
-      <h1>Marcas</h1>
-      <p>Tilibra</p>
-      <p>Foroni</p>
-      <p>Faber Castell</p>
-      <p>Jandaia</p>
-    </div>
-    <button>
-      <a href="#home"><img src="./img/chevron-up.svg" alt="Seta para cima"></a>
-    </button>
-  </footer>
-  
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./index.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
 </body>
-
 </html>

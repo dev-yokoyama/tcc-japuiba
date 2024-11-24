@@ -13,17 +13,18 @@ async function listarProdutos() {
   }
   
   async function mostrarProdutos() {
-    const produtos = await listarProdutos();
+    const todosProdutos = await listarProdutos();
     const itensPorPagina = 12;
     let paginaAtual = 1;
+    let produtosFiltrados = [...todosProdutos]; 
   
-    function renderizarProdutos() {
+    function renderizarProdutos(produtosParaExibir) {
       const cardLista = document.getElementById('card-lista');
       cardLista.innerHTML = '';
   
       const inicio = (paginaAtual - 1) * itensPorPagina;
       const fim = inicio + itensPorPagina;
-      const produtosPagina = produtos.slice(inicio, fim);
+      const produtosPagina = produtosParaExibir.slice(inicio, fim);
   
       produtosPagina.forEach(produto => {
         const li = document.createElement('li');
@@ -39,13 +40,13 @@ async function listarProdutos() {
         cardLista.appendChild(li);
       });
   
-      atualizarBotoesPaginacao();
+      atualizarBotoesPaginacao(produtosParaExibir);
     }
   
-    function atualizarBotoesPaginacao() {
+    function atualizarBotoesPaginacao(produtosParaExibir) {
       const paginacaoContainer = document.getElementById('paginacao');
       paginacaoContainer.innerHTML = '';
-      const totalPaginas = Math.ceil(produtos.length / itensPorPagina);
+      const totalPaginas = Math.ceil(produtosParaExibir.length / itensPorPagina);
   
       for (let i = 1; i <= totalPaginas; i++) {
         const botaoPagina = document.createElement('button');
@@ -53,7 +54,7 @@ async function listarProdutos() {
         botaoPagina.textContent = i;
         botaoPagina.addEventListener('click', () => {
           paginaAtual = i;
-          renderizarProdutos();
+          renderizarProdutos(produtosParaExibir);
         });
   
         if (i === paginaAtual) {
@@ -64,7 +65,26 @@ async function listarProdutos() {
       }
     }
   
-    renderizarProdutos();
+    function filtrarProdutos(itemSelecionado) {
+      if (itemSelecionado === 'Todos') {
+        produtosFiltrados = [...todosProdutos]; 
+      } else {
+        produtosFiltrados = todosProdutos.filter(produto => produto.item === itemSelecionado);
+      }
+  
+      renderizarProdutos(produtosFiltrados);
+    }
+  
+    document.querySelectorAll('.filtro').forEach(botao => {
+      botao.addEventListener('click', (event) => {
+        const itemSelecionado = event.target.getAttribute('data-categoria');
+        filtrarProdutos(itemSelecionado);
+      });
+    });
+  
+    renderizarProdutos(produtosFiltrados); 
   }
   
   mostrarProdutos();
+  
+  

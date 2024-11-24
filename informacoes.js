@@ -22,13 +22,19 @@ async function obterDetalhesProduto(id) {
     const detalhesContainer = document.getElementById('detalhes-container');
     detalhesContainer.innerHTML = `
       <div class="detalhes">
+        <div class="info">
         <img src="${produto.imagem}" alt="${produto.titulo}" class="detalhes-imagem">
+         <div class="detalhes-secundarios">
         <h2>${produto.titulo}</h2>
-        <p><strong>Item:</strong> ${produto.item}</p>
-        <p><strong>Marca:</strong> ${produto.marca}</p>
-        <p><strong>Descrição:</strong> ${produto.descr}</p>
-      </div>
-      <button onclick="window.history.back()">Voltar</button>
+        <p class="produto"><strong>Item:</strong> ${produto.item}</p>
+        <p class="marca"><strong>Marca:</strong> ${produto.marca}</p>
+          <p class="descricao"><strong>Descrição:</strong> ${produto.descr}</p>
+          <button class="button2" onclick="window.history.back()">Veja mais</button>
+           <button class="button1" onclick="window.history.back()">Voltar</button>
+        </div>
+        </div>
+         </div>
+
     `;
   }
   
@@ -40,4 +46,3 @@ async function obterDetalhesProduto(id) {
   } else {
     document.getElementById('detalhes-container').innerHTML = 'Produto não encontrado.';
   }
-  
