@@ -1,6 +1,6 @@
 async function listarProdutos() {
     try {
-      const response = await fetch('http://localhost:3000/api/produtos');
+      const response = await fetch('https://tcc-japuiba.onrender.com/api/produtos');
       if (!response.ok) {
         throw new Error('Erro ao buscar produtos');
       }
