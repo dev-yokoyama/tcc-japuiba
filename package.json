@@ -4,6 +4,7 @@
   "description": "",
   "main": "produtos.js",
   "scripts": {
+    "postinstall": "npm rebuild sqlite3 --build-from-source",
     "start": "node api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
