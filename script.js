@@ -84,7 +84,17 @@ async function listarProdutos() {
   
     renderizarProdutos(produtosFiltrados); 
   }
-  
+const filtroShow = document.querySelectorAll('.filtragem')
+
+function selectLink(){
+  filtroShow.forEach((filtragem)=>
+    filtragem.classList.remove('ativo')
+  )
+  this.classList.add('ativo')
+}
+filtroShow.forEach((filtragem)=>
+  filtragem.addEventListener('click',  selectLink)
+)
   mostrarProdutos();
   
   
