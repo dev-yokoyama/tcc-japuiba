@@ -1,25 +1,12 @@
 * {
-  padding: 0;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  padding: 0;
   box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  overflow-x: hidden;
+  font-family: sans-serif;
 }
 body{
-  background-color: #044cb9;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.azul {
-  background: #0f1357;
- 
+  background: #76bcef;
+  font-size: 16px; /
 }
 
 .nav {
@@ -36,12 +23,13 @@ html {
 .logo img {
   max-width: 250px;
 }
+
 nav li {
   margin: 0 15px;
   list-style-type: none;
 }
 
-.nav a::after {
+.link::after {
   content: "";
   width: 0;
   height: 3px;
@@ -52,11 +40,11 @@ nav li {
   transition: 0.5s ease-in-out;
 }
 
-.nav a:hover::after {
+.link:hover::after {
   width: 100%;
 }
 
-.nav a {
+.link {
   text-decoration: none;
   color: rgb(255, 255, 255);
   padding: 0 10px;
@@ -70,7 +58,9 @@ nav li {
   list-style: none;
   flex-wrap: wrap; 
 }
-
+a{
+  text-decoration: none;
+}
 
 .input-group {
   display: flex; 
@@ -78,14 +68,18 @@ nav li {
   background-color: #fafafa; 
   padding: 10px;
   border-radius: 54px;
-  flex: 1; 
   gap: 8px;
-  width: 1100px; 
-  max-width: 600px; 
-  margin: 0 auto;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1; 
+  max-width: 400px;
+  min-width: 950px;
+  
 }
-
+.item-title{
+  color: black;
+}
+.item-subtitle, .item-description{
+  color: #8b8b8b;
+}
 .input-field {
   flex: 1; 
   border: none;
@@ -97,6 +91,7 @@ nav li {
   outline: none; 
 }
 
+
 .input-icon {
     width: 32px; 
     height: 32px; 
@@ -104,56 +99,45 @@ nav li {
     align-items: center;
     justify-content: center;
     border-radius: 100%;
-    color: rgb(0, 0, 0); 
+    color: #ffffff; 
+    background: #76bcef;
 }
-  .item{
-    display: flex; 
-    align-items: center; 
-    gap: 16px;
-    border-radius: 8px; 
-    padding: 12px; 
-    width: 100%; 
-  }
+
+.item{
+  display: flex; 
+  align-items: center; 
+  gap: 16px;
+  border-radius: 8px; 
+  padding: 12px; 
+  width: 100%; 
+}
 .item:hover{
-  background: rgb(224, 224, 224);
+background: rgb(224, 224, 224);
 }
 .items {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 42px;
-  list-style: none;
-  margin-top: 12px;
-  background: #fafafa;
-  border-radius: 24px;
-  padding: 14px;
-  width: 950px;
-  height: 621px;
-  overflow-y: auto;
-  position: absolute; 
-  z-index: 100;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 42px;
+list-style: none;
+margin-top: 12px;
+background: #fafafa;
+border-radius: 24px;
+padding: 14px;
+width: 950px;
+height: 621px;
+overflow-y: auto;
+position: absolute; 
+z-index: 100;
 }
 
 
 .item-imagem img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
+width: 120px;
+height: 120px;
+object-fit: cover;
+border-radius: 8px;
 }
-
-
-.input-icon {
-  width: 32px; 
-  height: 32px; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  color: #ffffff; 
-  background: #0f1357;
-}
-
 h1{
   color: #044cb9;
 }
@@ -162,19 +146,19 @@ h1{
 }
 .informacoes{
   position: absolute;
-  top: 40px;
-  left: 0%;
-  transform: translateX(-50%);
+  top: 40px; 
+  left: 0%; 
+  transform: translateX(-50%); 
   border: none;
   background-color: #2002a1;
   max-width: 400px;
   width: 450px;
   height: 550px;
   display: flex;
-  z-index: 2;
+  z-index: 2; 
   cursor: pointer;
   box-shadow: 0 14px 25px rgba(0, 0, 0, 0.2);
-  padding: 20px 30px;
+  padding: 20px 30px; 
   flex-direction: column;
 }
 .informacoes h2 {
@@ -291,7 +275,58 @@ form textarea{
   background-color: #0066ff; 
 }
 
+@media (max-width: 768px) {
+  body {
+      font-size: 12px; 
+  }
 
+  .barra-pesquisa {
+      display: block;
+      width: 50%; 
+      margin: 0 auto;
+  }
+
+  .informacoes {
+      font-size: 10px; 
+  }
+
+  .formulario-contato {
+      width: 100%; 
+      padding: 0 10px;
+  }
+
+  .botao-enviar {
+      font-size: 14px;
+      padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    max-width: 150px;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+
+  .input-group {
+    max-width: 300px;
+  }
+
+  .item-imagem img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .todo-contato {
+    padding: 10px;
+  }
+
+  .form input, form textarea {
+    font-size: 14px;
+  }
+}
 
 @media (max-width: 1024px) {
   .nav {
