@@ -17,7 +17,6 @@
     position: relative;
     gap: 16px;
     flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.5);
   }
   
   .logo img {
@@ -28,7 +27,7 @@
     list-style-type: none;
   }
   
-  .nav a::after {
+  .nav .link::after {
     content: "";
     width: 0;
     height: 3px;
@@ -39,13 +38,13 @@
     transition: 0.5s ease-in-out;
   }
   
-  .nav a:hover::after {
+  .nav .link:hover::after {
     width: 100%;
   }
   
   .nav a {
     text-decoration: none;
-    color: rgb(145, 145, 145);
+    color: rgb(124, 124, 124);
     padding: 0 10px;
     position: relative;
     font-size: 20px;
@@ -65,11 +64,12 @@
     background-color: #fafafa; 
     padding: 10px;
     border-radius: 54px;
-    gap: 8px;
     flex: 1; 
-    max-width: 50px;
-    min-width: 950px;
-    
+    gap: 8px;
+    width: 1100px; 
+    max-width: 600px; 
+    margin: 0 auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .input-field {
@@ -104,6 +104,7 @@
     background: rgb(224, 224, 224);
   }
   .items {
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,6 +128,19 @@
     object-fit: cover;
     border-radius: 8px;
   }
+  
+  
+  .input-icon {
+    width: 32px; 
+    height: 32px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    color: #ffffff; 
+    background: #0f1357;
+  }
+  
   .carousel-control-prev, .carousel-control-next {
     border: none; 
     padding: 10px; 
@@ -144,6 +158,7 @@
   .grid2{
     width: 500px;
     height: 400px;
+    aspect-ratio: 1 / 1;
   }
   
   .grid1{
@@ -155,13 +170,17 @@
   }
   .grid-item{
     display: grid;
+    position: relative;
   }
   .grid-item img{
     grid-column: 1;
     grid-row: 1/3;
     align-self: end;
     margin: 0 auto;
+    display: block;
+
   }
+  
   .grid-item p{
     padding: 10px;
     font-weight: bold;
@@ -205,12 +224,14 @@
     
   }
   
+  
   #carouselExampleAutoplaying {
     margin-bottom: 30px; 
   }
   
   .categorias {
     margin-top: 30px;
+    flex-wrap: wrap;
   }
   
   .categorias p{
@@ -251,6 +272,7 @@
     flex-direction: row-reverse;
     gap: 5%;
     margin-top: 80px;
+    margin-bottom: 50px;
   }
   .primeiro-h h2{
     color: orange;
@@ -410,30 +432,6 @@
   
   
   
-  @media (max-width: 768px) {
-    footer {
-      flex-direction: column; 
-      height: auto; 
-      padding: 30px;
-    }
-  
-    footer img {
-      max-width: 100%; 
-      margin: 20px 0;
-    }
-  
-    footer button {
-      top: -25px; 
-      width: 40px;
-      height: 40px;
-    }
-  
-    footer button img {
-      width: 20px;
-      height: 20px;
-    }
-  }
-
 
  .card-lista{
   justify-content: center;
@@ -498,4 +496,320 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
   
+  }
+  @media (max-width: 768px) {
+   
+    .grid {
+      grid-template-columns: 1fr; 
+    }
+    .primeiro-h img,
+    .segundo-h img,
+    .terceiro-h img {
+      width: 200px; 
+      height: 200px;
+    }
+  
+    .primeiro-h h2,
+    .segundo-h h2,
+    .terceiro-h h2 {
+      font-size: 1.25rem;
+    }
+  
+    .primeiro-h p,
+    .segundo-h p,
+    .terceiro-h p {
+      font-size: 0.9rem;
+    }
+  
+    .primeiro-h div,
+    .segundo-h div,
+    .terceiro-h div {
+      max-width: 95%;
+    }
+
+    .grid-item:nth-child(1) {
+      grid-row: auto;
+    }
+
+    .grid-item img {
+      width: 100%; /* Imagens ocupam toda a largura do container */
+      height: auto;
+    }
+
+    .grid-item p {
+      font-size: 16px; /* Reduz tamanho do texto */
+    }
+    .grid-item p {
+      font-size: 18px; /* Reduz o tamanho da fonte em telas pequenas */
+    }
+    footer {
+      flex-direction: column; 
+      height: auto; 
+      padding: 30px;
+    }
+  
+    footer img {
+      max-width: 100%; 
+      margin: 20px 0;
+    }
+  
+    footer button {
+      top: -25px; 
+      width: 40px;
+      height: 40px;
+    }
+  
+    footer button img {
+      width: 20px;
+      height: 20px;
+    }
+    .categorias {
+      justify-content: space-around; /* Distribui igualmente os itens em telas menores */
+    }
+  
+    .categorias img {
+      width: 120px;
+      height: 120px; /* Reduz o tamanho das imagens em telas pequenas */
+    }
+  }
+  @media (max-width: 1200px) {
+    .card-lista {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 1024px) {
+    .card-lista {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+        gap: 30px;
+    } 
+    .primeiro-h,
+    .segundo-h,
+    .terceiro-h {
+      flex-direction: column; 
+      text-align: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+  
+    .primeiro-h img,
+    .segundo-h img,
+    .terceiro-h img {
+      width: 350px;
+      height: 250px;
+    }
+  
+    .primeiro-h div,
+    .segundo-h div,
+    .terceiro-h div {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  
+    .primeiro-h h2,
+    .segundo-h h2,
+    .terceiro-h h2 {
+      font-size: 1.5rem; 
+    }
+  
+    .primeiro-h p,
+    .segundo-h p,
+    .terceiro-h p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+     .grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas menores */
+    }    .grid {
+      grid-template-columns: 1fr 1fr; /* Duas colunas em telas médias */
+    }
+
+    .grid-item:nth-child(1) {
+      grid-row: auto; /* Remove o destaque do item 1 */
+      grid-column: span 2; /* Ocupa as duas colunas */
+    }
+
+    .grid2 {
+      width: 100%; /* Ajusta a largura das imagens */
+      height: 100%; /* Mantém proporção */
+    }
+
+    .grid1 {
+      width: 100%; /* Ajusta largura da imagem principal */
+      height: auto;
+    }
+  
+  
+    .card-lista .card-item .card-link {
+        width: 320px; /* Reduz a largura dos cards */
+        padding: 16px;
+    }
+  
+    .card-lista .card-link .item {
+        font-size: 0.9rem; /* Fonte menor */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .card-lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .card-lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .card-lista {
+        grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 480px) {
+    .categorias {
+      justify-content: center; /* Alinha os itens ao centro em telas muito pequenas */
+    }
+  
+    .categorias img {
+      width: 100px;
+      height: 100px; /* Reduz ainda mais as imagens em telas muito pequenas */
+    }
+  }
+  @media (max-width: 1024px) {
+    .texto {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .texto img {
+      width: 100%;
+      max-width: 400px;
+      margin-left: 0;
+    }
+ 
+ 
+    .texto h1 {
+      font-size: 40px;
+      text-align: center;
+    }
+  
+    .texto p {
+      font-size: 18px;
+      text-align: center;
+    }
+    .texto section a {
+      font-size: 18px;
+      padding: 15px;
+    }
+  
+    .nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .input-group {
+      max-width: 100%;
+      padding: 8px;
+    }
+  
+    .items {
+      width: 90%;
+      height: auto;
+      position: static;
+    }
+    .texto::before{
+      display: none;
+    }
+    .texto::after{
+      display: none;
+    }
+    .input-group{
+      width: 300px;
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 768px) {
+   
+    footer {
+      flex-direction: column; 
+      height: auto; 
+      padding: 30px;
+    }
+  
+    footer img {
+      max-width: 100%; 
+      margin: 20px 0;
+    }
+  
+    footer button {
+      top: -25px; 
+      width: 40px;
+      height: 40px;
+    }
+  
+    footer button img {
+      width: 20px;
+      height: 20px;
+    }
+    .texto p {
+      font-size: 16px;
+    }
+  
+    .texto img {
+      max-width: 300px;
+    }
+  
+    .nav-list {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .input-group {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .input-icon {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .items {
+      gap: 20px;
+      padding: 10px;
+    }
+  
+    .item-imagem img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .texto h1 {
+      font-size: 25px;
+    }
+  
+    .texto p {
+      font-size: 14px;
+    }
+  
+    .texto img {
+      max-width: 200px;
+    }
+  
+    .nav a {
+      font-size: 16px;
+    }
+  
+    .input-field {
+      font-size: 14px;
+    }
+  
+    .item-imagem img {
+      width: 60px;
+      height: 60px;
+    }
   }

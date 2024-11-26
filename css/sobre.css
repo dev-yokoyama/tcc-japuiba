@@ -2,13 +2,20 @@
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 .azul {
   background: #0f1357;
+ 
 }
 
 .nav {
@@ -67,11 +74,12 @@ nav li {
   background-color: #fafafa; 
   padding: 10px;
   border-radius: 54px;
-  gap: 8px;
   flex: 1; 
-  max-width: 50px;
-  min-width: 950px;
-  
+  gap: 8px;
+  width: 1100px; 
+  max-width: 600px; 
+  margin: 0 auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .input-field {
@@ -187,7 +195,7 @@ nav li {
   font-size: 50px;
 }
 .texto p {
-  color: #cccccc;
+  color: #ffffff;
   font-size: 23px;
   margin: 15px 0 45px 0;
 }
@@ -199,7 +207,7 @@ nav li {
   margin: 0 20px;
 }
 .texto section a {
-  color: #cccccc;
+  color: #ffffff;
   background-color: #091290;
   padding: 20px;
   border-radius: 40px;
@@ -255,6 +263,7 @@ nav li {
   align-items: center;
   gap: 32.5%;
   margin-top: 80px;
+  margin-bottom: 30px;
 }
 .terceiro-h img{
   width: 300px;
@@ -326,6 +335,24 @@ nav li {
   color: #666;
   line-height: 1.6;
 }
+.primeiro-h,
+.segundo-h,
+.terceiro-h {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25%;
+  margin-top: 50px;
+}
+
+.primeiro-h img,
+.segundo-h img,
+.terceiro-h img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 footer {
   display: flex;
@@ -389,7 +416,126 @@ footer button img {
 
 
 
+
+@media (max-width: 1024px) {
+  .texto {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .texto img {
+    width: 100%;
+    max-width: 400px;
+    margin-left: 0;
+  }
+  .primeiro-h,
+  .segundo-h,
+  .terceiro-h {
+    flex-direction: column; 
+    text-align: center;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .primeiro-h img,
+  .segundo-h img,
+  .terceiro-h img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .primeiro-h div,
+  .segundo-h div,
+  .terceiro-h div {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .primeiro-h h2,
+  .segundo-h h2,
+  .terceiro-h h2 {
+    font-size: 1.5rem; 
+  }
+
+  .primeiro-h p,
+  .segundo-h p,
+  .terceiro-h p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .texto h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .texto p {
+    font-size: 18px;
+    text-align: center;
+  }
+  .texto section a {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .input-group {
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  .items {
+    width: 90%;
+    height: auto;
+    position: static;
+  }
+  .texto::before{
+    display: none;
+  }
+  .texto::after{
+    display: none;
+  }
+  .input-group{
+    width: 300px;
+    display: flex;
+  }
+}
+
 @media (max-width: 768px) {
+  .texto h1 {
+    font-size: 30px;
+  }
+  .texto section a {
+    justify-content: center;
+    display: flex;
+  }
+  .primeiro-h img,
+  .segundo-h img,
+  .terceiro-h img {
+    width: 200px; 
+    height: 200px;
+  }
+
+  .primeiro-h h2,
+  .segundo-h h2,
+  .terceiro-h h2 {
+    font-size: 1.25rem;
+  }
+
+  .primeiro-h p,
+  .segundo-h p,
+  .terceiro-h p {
+    font-size: 0.9rem;
+  }
+
+  .primeiro-h div,
+  .segundo-h div,
+  .terceiro-h div {
+    max-width: 95%;
+  }
   footer {
     flex-direction: column; 
     height: auto; 
@@ -410,5 +556,64 @@ footer button img {
   footer button img {
     width: 20px;
     height: 20px;
+  }
+  .texto p {
+    font-size: 16px;
+  }
+
+  .texto img {
+    max-width: 300px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .items {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .item-imagem img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .texto h1 {
+    font-size: 25px;
+  }
+
+  .texto p {
+    font-size: 14px;
+  }
+
+  .texto img {
+    max-width: 200px;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  .input-field {
+    font-size: 14px;
+  }
+
+  .item-imagem img {
+    width: 60px;
+    height: 60px;
   }
 }
