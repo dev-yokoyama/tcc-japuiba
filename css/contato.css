@@ -62,10 +62,12 @@ a{
   text-decoration: none;
 }
 
+/* BARRA DE PESQUISA */
+
 .input-group {
   display: flex; 
   align-items: center; 
-  background-color: #fafafa; 
+  background-color: #e1dcdc; 
   padding: 10px;
   border-radius: 54px;
   flex: 1; 
@@ -144,6 +146,20 @@ a{
   background: #0f1357;
 }
 
+.item-title {
+  color: #000000;
+}
+
+.item-subtitle {
+  color: #000000;
+}
+
+.item-description{
+  color: #000000;
+}
+
+/* FIM DA BARRA DE PESQUISA */
+
 .texto {
   display: flex;
   justify-content: center;
@@ -159,7 +175,7 @@ a{
   z-index: 1;
 }
 h1{
-  color: #044cb9;
+  color: #044cb9; 
 }
 .informacoes h2{
   color: white;

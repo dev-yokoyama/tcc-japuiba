@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/produtos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-     </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/produtos.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+</head>
+
 <body id="home">
-  
+
   <header>
     <nav class="nav">
-        <div class="logo">
-            <img src="../img/logojapuiba-removebg-preview.png" alt="">
-        </div>
-        <div id="pesquisa">
-          <div class="input-group">
-            <div class="input-icon">
-              <i class="bi bi-search"></i>
-            </div>
-            <input type="text" id="search" class="input-field" placeholder="Pesquisar">
+      <div class="logo">
+        <img src="../img/logojapuiba-removebg-preview.png" alt="">
+      </div>
+      <div id="pesquisa">
+        <div class="input-group">
+          <div class="input-icon">
+            <i class="bi bi-search"></i>
           </div>
-          <ul class="items">
-            <li class="item">
-              <div class="item-imagem">
-                <img src="./img/produto1.png" alt="Produto">
-              </div>
-              <div class="item-content">
-                <a href="detalhes.html?id=${produto.id}">
+          <input type="text" id="search" class="input-field" placeholder="Pesquisar">
+        </div>
+        <ul class="items">
+          <li class="item">
+            <div class="item-imagem">
+              <img src="./img/produto1.png" alt="Produto">
+            </div>
+            <div class="item-content">
+              <a href="detalhes.html?id=${produto.id}">
                 <h2 class="item-title">Produto 1</h2>
                 <p class="item-subtitle">Subtítulo</p>
                 <p class="item-description">Descrição do produto</p>
               </a>
-              </div>
-            </li>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul class="nav-list">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./sobre.html">Sobre</a></li>
+        <li><a href="./contato.html">Contato</a></li>
+        <li><a href="">Produtos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="filter">
+
+
+    <div id="filtros">
+      <img src="../img/categoria.webp" alt="" class="filtro" data-categoria="Marcador"></img>
+      <img src="../img/pexels-punttim-53874.jpg" class="filtro" data-categoria="Caneta"></img>
+      <img src="../img/pexels-pixabay-247650.jpg" class="filtro" data-categoria="Caneca"></img>
+      <img src="../img/pexels-pixabay-220502.jpg" class="filtro" data-categoria="Lápis"></img>
+      <img src="../img/mochila.jpeg" class="filtro" data-categoria="Mochila"></img>
+      <button onclick="filtroShow()" class="filtro" data-categoria="Todos">Todos</button>
+    </div>
+
+
+    <div class="pagina">
+
+      <div class="container">
+        <div class="card">
+          <ul id="card-lista" class="card-lista">
           </ul>
         </div>
-        <ul class="nav-list">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./sobre.html">Sobre</a></li>
-            <li><a href="./contato.html">Contato</a></li>
-            <li><a href="">Produtos</a></li>
-        </ul>
-    </nav>
-</header>
-
-  
-    <div class="filter">
-     
-    
-      <div id="filtros">
-        <img src="../img/categoria.webp" alt="" class="filtro" data-categoria="Marcador"></img>
-        <img src="../img/pexels-punttim-53874.jpg" class="filtro" data-categoria="Caneta"></img>
-        <img src="../img/pexels-pixabay-247650.jpg" class="filtro" data-categoria="Caneca"></img>
-        <img src="../img/pexels-pixabay-220502.jpg" class="filtro" data-categoria="Lápis"></img>
-        <img src="../img/mochila.jpeg" class="filtro" data-categoria="Mochila"></img>
-        <button onclick="filtroShow()" class="filtro" data-categoria="Todos" >Todos</button>
       </div>
-     
-     
-  <div class="pagina">
-  
- <div class="container">
-  <div class="card">
-   <ul id="card-lista" class="card-lista">
-   </ul>
+      <div class="pagina">
+        <div id="paginacao" class="pagination-buttons"></div>
+      </div>
+    </div>
   </div>
- </div>
- <div class="pagina">
-  <div id="paginacao" class="pagination-buttons"></div>
-</div>
-</div>
-</div>
 
-<footer>
+  <footer>
     <div>
       <h1>Mapa do site</h1>
       <a href="../index.html">Inicio</a>
@@ -93,8 +96,11 @@
       <a href="#home"> <img src="../img/chevron-up.svg" alt=""></a>
     </button>
   </footer>
-     <script src="../script.js"></script>
-     <script src="../js/contato.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../script.js"></script>
+  <script src="../js/contato.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

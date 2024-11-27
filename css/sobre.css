@@ -67,11 +67,12 @@ nav li {
   flex-wrap: wrap; 
 }
 
+/* BARRA DE PESQUISA */
 
 .input-group {
   display: flex; 
   align-items: center; 
-  background-color: #fafafa; 
+  background-color: #e1dcdc; 
   padding: 10px;
   border-radius: 54px;
   flex: 1; 
@@ -148,7 +149,20 @@ nav li {
   border-radius: 100%;
   color: #ffffff; 
   background: #0f1357;
-}
+
+  .item-title {
+    color: #000000;
+  }
+  
+  .item-subtitle {
+    color: #000000;
+  }
+  
+  .item-description{
+    color: #000000;
+  }
+
+}  /* fim da barra de pesquisa   */
 
 #search::placeholder {
   color: #0f1357; 

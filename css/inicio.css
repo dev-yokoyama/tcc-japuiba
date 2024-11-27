@@ -57,7 +57,8 @@
     flex-wrap: wrap; 
   }
   
-  
+  /* BARRA DE PESQUISA */
+
   .input-group {
     display: flex; 
     align-items: center; 
@@ -83,6 +84,10 @@
     outline: none; 
   }
   
+  .item-title{
+    font-weight: bold;
+  }
+
   .input-icon {
       width: 32px; 
       height: 32px; 
@@ -140,11 +145,26 @@
     color: #ffffff; 
     background: #0f1357;
   }
+
+  .item-title {
+    color: #000000;
+  }
   
+  .item-subtitle {
+    color: #000000;
+  }
+  
+  .item-description{
+    color: #000000;
+  }
+  
+/* FIM DA BARRA DE PESQUISA */
+
   .carousel-control-prev, .carousel-control-next {
     border: none; 
     padding: 10px; 
   }
+
   .grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -181,15 +201,6 @@
 
   }
   
-  .grid-item p{
-    padding: 10px;
-    font-weight: bold;
-    color: white;
-    grid-column: 1;
-    grid-row: 2;
-    font-size: 20px;
-    align-self: end;
-  }
   
   .carousel-control-prev-icon, .carousel-control-next-icon {
     border: 1px solid rgb(194, 193, 193);

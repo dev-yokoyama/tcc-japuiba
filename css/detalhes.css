@@ -159,12 +159,16 @@
   .detalhes-secundarios .produto,
   .detalhes-secundarios .marca {
     margin: 5px 0;
+    font-size: 18px;
   }
   
   .descricao {
     margin-top: 20px;
-    font-size: 14px;
+    font-size: 18px;
     justify-content: center;
+    max-width: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 .button1{
     background: orange;
