@@ -139,6 +139,12 @@ nav li {
 .filtro {
   width: 200px;
   margin-right: 40px;
+  cursor: pointer;
+  transition: transform 0.5s ease ;
+}
+
+.filtro:hover {
+  transform: scale(1.2);
 }
 
 

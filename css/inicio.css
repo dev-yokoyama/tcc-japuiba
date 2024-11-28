@@ -232,8 +232,19 @@
   .categorias{
     display: flex;
     justify-content: center;
-    
+
   }
+
+  .categorias-hover{
+    cursor: pointer;
+    transition: transform 0.5s ease;
+  }
+
+  .categorias-hover:hover{
+    transform: scale(1.1);
+  }
+
+ 
   
   
   #carouselExampleAutoplaying {
@@ -267,7 +278,8 @@
   }
   .novidade h2{
     font-weight: bold;
-    color: #ffae00;
+    color: #004aad;
+    margin-bottom: 25px;
   }
   .primeiro-h {
     display: flex;
@@ -311,7 +323,9 @@
     font-weight: bold;
     font-size: 20px;
     text-align: end;
-    color: #ffae00;
+    color:#004aad;
+    margin-bottom: 25px;
+
   }
 
    .imagens{
