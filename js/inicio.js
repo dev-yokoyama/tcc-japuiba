@@ -35,7 +35,7 @@
               <img class="card-imagem" src="${produto.imagem}" alt="${produto.titulo}">
               <p class="item">${produto.item}</p>
               <h2 class="card-titulo">${produto.titulo}</h2>
-              <button class="card-button"><i class="bi bi-arrow-right"></i></button>
+              <button class="card-button">Veja mais</button>
             </a>
           `;
           cardLista.appendChild(li);
