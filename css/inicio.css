@@ -395,7 +395,11 @@
     color: #333;
     font-weight: bold;
   }
+
+  /* FOOTER */
+
   footer {
+
     display: flex;
     justify-content: space-around; 
     align-items: center;
@@ -406,35 +410,28 @@
     padding: 20px 0; 
     box-sizing: border-box;
     position: relative; 
-  }
-  
-  footer div {
-    display: grid;
-    justify-items: center;
-    color: #fff;
-  }
-  
-  footer div h1 {
-    margin-bottom: 10px;
-  }
-  
-  footer div p,
-  footer div a {
-    margin-bottom: 8px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  footer img {
-    max-width: 600px;
-    border-radius: 2px;
-  }
-  
-  footer button {
+    
+}
+
+
+.mapBox {
+    position: relative;
+    width: 600px;
+    height: 250px;
+    background: #fff;
+    margin: 90px;
+}
+
+.mapBox iframe {
+    width: 100%;
+    height: 100%;
+}
+
+footer button {
     position: absolute;
-    top: -30px; 
-    left: 50%; 
-    transform: translateX(-50%); 
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
     border: none;
     background-color: #e7e7e7;
     border-radius: 50%;
@@ -443,17 +440,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10; 
+    z-index: 10;
     cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer div {
+    display: grid;
+    justify-items:flex-start;
+    color: #fff;
+}
+
+footer div h1 {
+    margin-bottom: 10px;
+}
+
+footer div p,
+footer div a {
+    margin-bottom: 8px;
+    color: white;
+    text-decoration:none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+footer h1{
+    color:#091290;
+font-family: Georgia, 'Times New Roman', Times, serif;
   }
-  
-  footer button img {
-    width: 24px;
-    height: 24px;
-    padding: 0;
-  }
-  
   
   
  
