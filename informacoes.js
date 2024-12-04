@@ -29,8 +29,9 @@ async function obterDetalhesProduto(id) {
         <p class="produto"><strong>Item:</strong> ${produto.item}</p>
         <p class="marca"><strong>Marca:</strong> ${produto.marca}</p>
           <p class="descricao"><strong>Descrição:</strong> ${produto.descr}</p>
-          <button class="button2" onclick="window.history.back()">Veja mais</button>
-           <button class="button1" onclick="window.history.back()">Voltar</button>
+          <a class="button2" href="https://www.japuibapapelaria.com.br/">Veja mais</a>
+          <button class="button1" onclick="window.history.back()">Voltar</button>
+
         </div>
         </div>
          </div>

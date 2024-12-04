@@ -65,20 +65,14 @@ async function mostrarProdutos() {
     }
   }
 
-  function exibirMensagem() {
-    const mensagem = document.getElementById('mensagem');
-    mensagem.style.display = 'block';
-  }
 
   function filtrarProdutos(itemSelecionado) {
     if (itemSelecionado === 'Todos') {
-      exibirMensagem();  // Exibe a mensagem ao selecionar "Todos"
-      produtosFiltrados = [...todosProdutos];  // Mostra todos os produtos
     } else {
       produtosFiltrados = todosProdutos.filter(produto => produto.item === itemSelecionado);
     }
 
-    paginaAtual = 1; // Reseta para a primeira página ao filtrar
+    paginaAtual = 1;
     renderizarProdutos(produtosFiltrados);
   }
 
@@ -88,8 +82,17 @@ async function mostrarProdutos() {
       filtrarProdutos(itemSelecionado);
     });
   });
+  document.querySelectorAll('.filtro').forEach(botao => {
+    botao.addEventListener('click', (event) => {
+      const itemSelecionado = event.target.getAttribute('data-categoria');
+      filtrarProdutos(itemSelecionado);
+    });
+  });
+  
+ 
+  renderizarProdutos(produtosFiltrados);
 
-  renderizarProdutos(produtosFiltrados); // Exibe os produtos ao carregar
+  
 }
 
 mostrarProdutos();

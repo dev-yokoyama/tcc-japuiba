@@ -75,3 +75,11 @@ document.getElementById('form-contato').addEventListener('submit', function(e) {
 
     this.reset();
 });
+function toggleMenu() {
+  const navburguer = document.querySelector('.navburguer');
+  const hamburguer = document.querySelector('.hamburguer');
+
+  navburguer.classList.toggle('active');
+  hamburguer.classList.toggle('open');
+}
+

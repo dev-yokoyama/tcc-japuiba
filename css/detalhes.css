@@ -188,8 +188,9 @@
 .button2{
   border: orange solid 2px;
   color: orange;
-  padding: 15px 40px;
+  padding: 18px 40px;
   background: white;
+  text-decoration: none;
   background: rgb(255, 249, 238);
 }
 
@@ -199,15 +200,36 @@
   margin-bottom: 50px;
 }
 
+  
+
+.card-lista{
+  justify-content: center;
+ }
+
+ .card-lista .card-link {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; 
+  text-align: center;
+  padding: 18px;
+  border-radius: 12px;
+  background: none;
+  border: 2px solid transparent;
+  transition: 0.2s ease;
+
+}
+
   .card-lista .card-item .card-link{
     width: 350px;
-    background: #f1f1f1;
+    background: none;
     padding: 18px;
     border-radius: 12px;
     display: block;
     text-decoration: none;
     border: 2px solid transparent;
-    box-shadow: 0 10px 10px rgba(0,0,0, 0.05);
     transition: 0.2s ease;
   }
   .card-lista .card-item .card-link:hover{
@@ -237,15 +259,14 @@
     font-weight: 600;
   }
   .card-lista .card-link .card-button{
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
+    border-radius: 50px;
     margin: 30px 0 5px;
     border: 2px solid #5372f0;
     background: none;
-    cursor: pointer;
     color: #5372f0;
-    transform: rotate(-45deg);
+    align-items: center;
+    padding: 10px 20px;
+    transition: ease-in-out 0.4s;
   }
   .card-lista .card-link:hover .card-button {
   color: white;   
@@ -325,9 +346,81 @@ footer div a {
     font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
+.menu-hamburguer {
+  display: none; 
+}
+
+.navburguer {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #fafafa;
+  border-radius: 8px;
+  width: 200px;
+  display: none; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navburguer li {
+  border-bottom: 1px solid #ddd;
+}
+
+.navburguer li:last-child {
+  border-bottom: none;
+}
+
+.navburguer a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.navburguer a:hover {
+  background-color: #f0f0f0;
+}
+
+.navburguer.active {
+  display: block; 
+}
+
+.hamburguer {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.hamburguer span {
+  display: block;
+  height: 4px;
+  background-color: #333;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.hamburguer.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburguer.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguer.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 
 footer h1{
-    color:#091290;
+    color:#4f5afc;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -339,17 +432,17 @@ footer h1{
   }
   @media (max-width: 1024px) {
     .card-lista {
-        grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+        grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
   
     .card-lista .card-item .card-link {
-        width: 320px; /* Reduz a largura dos cards */
+        width: 320px; 
         padding: 16px;
     }
   
     .card-lista .card-link .item {
-        font-size: 0.9rem; /* Fonte menor */
+        font-size: 0.9rem;
     }
   }
   

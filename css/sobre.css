@@ -72,13 +72,13 @@ nav li {
 .input-group {
   display: flex; 
   align-items: center; 
-  background-color: #e1dcdc; 
+  background-color: #ffffff; 
   padding: 10px;
   border-radius: 54px;
   flex: 1; 
   gap: 8px;
-  width: 1100px; 
-  max-width: 600px; 
+  width: 900px; 
+  max-width: 1000px; 
   margin: 0 auto;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -102,6 +102,7 @@ nav li {
     justify-content: center;
     border-radius: 100%;
     color: rgb(0, 0, 0); 
+    background: #000;
 }
   .item{
     display: flex; 
@@ -148,8 +149,7 @@ nav li {
   justify-content: center;
   border-radius: 100%;
   color: #ffffff; 
-  background: #0f1357;
-
+}
   .item-title {
     color: #000000;
   }
@@ -162,7 +162,7 @@ nav li {
     color: #000000;
   }
 
-}  /* fim da barra de pesquisa   */
+
 
 #search::placeholder {
   color: #0f1357; 
@@ -192,6 +192,79 @@ nav li {
   margin: -180px 0 0 1050px;
   border-radius: 50%;
 }
+
+.menu-hamburguer {
+  display: none; 
+}
+
+.navburguer {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: #fafafa;
+  border-radius: 8px;
+  width: 200px;
+  display: none; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navburguer li {
+  border-bottom: 1px solid #ddd;
+}
+
+.navburguer li:last-child {
+  border-bottom: none;
+}
+
+.navburguer a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.navburguer a:hover {
+  background-color: #f0f0f0;
+}
+
+.navburguer.active {
+  display: block; 
+}
+
+.hamburguer {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.hamburguer span {
+  display: block;
+  height: 4px;
+  background-color: #333;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.hamburguer.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburguer.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguer.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 
 .texto::before {
   content: "";
@@ -454,12 +527,10 @@ footer div a {
     font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
-
 footer h1{
-    color: #091290;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#4f5afc;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
 
 
 
@@ -556,6 +627,13 @@ footer h1{
 @media (max-width: 768px) {
   .texto h1 {
     font-size: 30px;
+  }
+  .menu-hamburguer {
+    display: block; 
+  }
+
+  .nav-list {
+    display: none;
   }
   .texto section a {
     justify-content: center;

@@ -40,32 +40,44 @@
         </ul>
       </div>
       <ul class="nav-list">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="./sobre.html">Sobre</a></li>
-        <li><a href="./contato.html">Contato</a></li>
-        <li><a href="">Produtos</a></li>
+        <li><a class="link" href="inicio.html">Inicio</a></li>
+        <li><a class="link" href="sobre.html">Sobre</a></li>
+        <li><a class="link" href="contato.html">Contato</a></li>
+        <li><a class="link" href="produtos.html">Produtos</a></li>
       </ul>
+      <div class="menu-hamburguer">
+        <div class="hamburguer" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="navburguer">
+          <li><a class="link" href="inicio.html">Início</a></li>
+          <li><a class="link" href="sobre.html">Sobre</a></li>
+          <li><a class="link" href="contato.html">Contato</a></li>
+          <li><a class="link" href="produtos.html">Produtos</a></li>
+        </ul>
+      </div>
+      
     </nav>
   </header>
 
-
-
   <div class="filter">
     <div id="filtros">
-      <img src="../img/marcatexto.03.png" alt="" class="filtro" data-categoria="Marcador"></img>
-      <img src="../img/canetas.03.png" class="filtro" data-categoria="Caneta"></img>
-      <img src="../img/caneca.01.jpg" class="filtro" data-categoria="Caneca"></img>
-      <img src="../img/lapis.03.png" class="filtro" data-categoria="Lápis"></img>
-      <img src="../img/mochila.03.png" class="filtro" data-categoria="Mochila"></img>
-      <button onclick="filtroShow()" class="filtro" data-categoria="Todos">Todos</button>
-
-    </div>
-  </div>
+      <img src="../img/marcatexto.03.png" alt="" class="filtro" data-categoria="Marcador">
+      <img src="../img/canetas.03.png" class="filtro" data-categoria="Caneta">
+      <img src="../img/caneca.01.jpg" class="filtro" data-categoria="Caneca">
+      <img src="../img/lapis.03.png" class="filtro" data-categoria="Lápis">
+      <img src="../img/mochila.03.png" class="filtro" data-categoria="Mochila">
+      <button id="toggleButton" class="filtro" data-categoria="Todos">Todos</button>
   
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="fecharModal()">aa</span>
-      <p>Coloque aqui qualquer conteúdo que desejar!</p>
+      <div id="menuTodos" class="menu-hidden">
+        <p>Marcadores</p>
+        <p>Canetas</p>
+        <p>Canecas</p>
+        <p>Lápis</p>
+        <p>Mochilas</p>
+      </div>
     </div>
   </div>
   
