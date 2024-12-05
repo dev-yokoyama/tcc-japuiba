@@ -55,29 +55,77 @@
         </div>
     </nav>
 </header>
-
-<div class="todo-contato">
-    <section class="formulario">
-        <form id="form-contato" action="">
-            <h1>Contato</h1>
-            <p>Estamos aqui para ajudar!</p>
-            <input type="text" name="nome" id="nome" placeholder="Nome:" required>
-            <input type="email" name="email" id="email" placeholder="Email:" required>
-            <textarea name="mensagem" id="mensagem" placeholder="Mensagem:" rows="5" required></textarea>
-            <div class="enviar">
-                <input type="submit" value="Enviar">
-            </div>
-        </form>
-        <p id="resposta-formulario"></p>
-        <div class="informacoes">
+<body>
+  <section>
+    <div class="container">
+      <div class="user signinBx">
+        <div class="imgBx"><img src="../img/pexels-cottonbro-3662630.jpg" alt="" /></div>
+        <div class="formBx">
+          <form action="" onsubmit="return false;">
+            <h2>Contatos</h2>
+            <input type="text" name="" placeholder="Username" />
+            <input type="password" name="" placeholder="Password" />
+            <input type="submit" name="" value="Login" />
+            <p class="signup">
+              Veja nossas informacoes
+              <a href="#" onclick="toggleForm();">Informações</a>
+            </p>
+          </form>
+        </div>
+      </div>
+      <div class="user signupBx">
+        <div class="formBx">
+          <form action="" onsubmit="return false;">
             <h2>Informações</h2>
             <div class="info">
-                <i class="bi bi-telephone"></i>
+               <i class="bi bi-telephone"></i>
                 <div>
                     <span>Telefone</span>
                     <p>(11) 3966-6544</p>
                 </div>
+            </div> 
+            <div class="info">
+                <i class="bi bi-calendar"></i>
+                <div>
+                    <span>Horário de Funcionamento</span>
+                    <p>Segunda à Sexta das 09:00 às 17:30<br>Sábado das 09:30 às 13:00</p>
+                </div>
             </div>
+            <div class="info">
+                <i class="bi bi-whatsapp"></i>
+                <div>
+                    <span>WhatsApp</span>
+                    <p>(11) 97079-8152</p>
+                </div>
+            </div>
+            <div class="info">
+                <i class="bi bi-geo-alt"></i>
+                <div>
+                    <span>Endereço</span>
+                    <p>Rua Antônio Lopes Marin, 77<br>Casa Verde - São Paulo - SP - CEP: 02516-050</p>
+                </div>
+            </div>
+            <p class="signup">
+              Se precisar de alguma coisa só responder o
+              <a href="#" onclick="toggleForm();">Formulario</a>
+            </p>
+          </div>
+          <div class="imgBx"><img src="../img/pexels-olia-danilevich-5088017.jpg" alt="" /></div>
+        </div>
+        </div>
+        
+          </form>
+       
+    </div>
+  </section>
+            <!-- <h2>Informações</h2>
+            <div class="info">
+               <i class="bi bi-telephone"></i>
+                <div>
+                    <span>Telefone</span>
+                    <p>(11) 3966-6544</p>
+                </div>
+            </div> 
             <div class="info">
                 <i class="bi bi-calendar"></i>
                 <div>
@@ -101,7 +149,7 @@
             </div>
         </div>
     </section>
-</div>
+</div> -->
 
 <!-- Plugins e Scripts -->
 <script src="https://cdn.userway.org/widget.js" data-account="YF8JPMKGxK"></script>
