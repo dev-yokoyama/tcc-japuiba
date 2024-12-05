@@ -40,11 +40,13 @@ nav li {
   transition: 0.5s ease-in-out;
 }
 
-.nav a:hover::after {
+.link:hover::after {
   width: 100%;
 }
 
-.nav a {
+
+
+.link {
   text-decoration: none;
   color: rgb(145, 145, 145);
   padding: 0 10px;
