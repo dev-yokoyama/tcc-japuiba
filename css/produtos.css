@@ -468,7 +468,7 @@ footer h1{
   padding: 0;
   margin: 0;
   position: absolute;
-  top: 50px;
+  top: 30px;
   right: 0;
   background: #fafafa;
   border-radius: 8px;
@@ -485,14 +485,6 @@ footer h1{
   border-bottom: none;
 }
 
-.navburguer a {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
 
 .navburguer a:hover {
   background-color: #f0f0f0;
@@ -510,7 +502,19 @@ footer h1{
   width: 30px;
   height: 20px;
 }
+.filtragemtotal li{
+  list-style: none;
+}
 
+.filtragemtotal a{
+  text-decoration: none;
+  gap: 2px;
+  font-size: 20px;
+  justify-content: center;
+  margin: 0 auto;
+ list-style: none; 
+ display: flex;
+}
 .hamburguer span {
   display: block;
   height: 4px;
@@ -542,20 +546,66 @@ footer h1{
   align-items: center;
   display: flex;
 }
-
+.todos{
+  background: white;
+width: 190px;
+height: 190px;
+border-radius: 50%;
+}
 #filtros {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
-
+.filtragemtotal{
+  list-style: none;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 200px;
+  display: none;
+  background: #fafafa;
+  border-radius: 10px;
+  width: 500px;
+  height: 400px;
+  display: none; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+  overflow-y: auto;
+}
 .filtro {
-  width: 130px;
-  height: 130px;
-  border-radius: 90px;
+  height: 40px;
+}
+.navburguer a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
+.filter img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 20px;
+  margin-bottom: 10px;
+
+}
+
+.filter {
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.filter p{
+  justify-content: center;
+  display: flex;
+}
 @media (max-width: 1200px) {
   .card-lista {
     grid-template-columns: repeat(3, 1fr);
@@ -565,19 +615,16 @@ footer h1{
 @media (max-width: 1024px) {
   .card-lista {
     grid-template-columns: repeat(3, 1fr);
-    /* 3 cards por linha */
     gap: 30px;
   }
 
   .card-lista .card-item .card-link {
     width: 320px;
-    /* Reduz a largura dos cards */
     padding: 16px;
   }
 
   .card-lista .card-link .item {
     font-size: 0.9rem;
-    /* Fonte menor */
   }
 }
 
@@ -602,27 +649,68 @@ footer h1{
 @media (max-width: 480px) {
   #filtros {
     justify-content: center;
-    /* Alinha os itens ao centro em telas muito pequenas */
   }
 
   .filtro img {
     width: 100px;
     height: 100px;
-    /* Reduz ainda mais as imagens em telas muito pequenas */
+  }
+  #menu {
+    top: 60%; 
+    width: 90%; 
+    max-width: none; 
+  }
+
+  #menu-container {
+    height: auto;
+  }
+
+  #menu li a {
+    font-size: 14px; 
   }
 }
 
 @media (max-width: 768px) {
-
+  .input-icon{
+    display: none;
+  }
+  .todos{
+    width: 400px;
+  }
   #filtros {
     justify-content: space-around;
-    /* Distribui igualmente os itens em telas menores */
+  }
+  #menu {
+    width: 80%;
+    max-width: none; 
+  }
+
+  #menu-container {
+    height: auto;
   }
 
   .filtro {
     width: 90px;
     height: 90px;
   }
+  .filtro{
+    display: none;
+  }
+  .filter p{
+    display: none;
+  }
+  #toggleButton{
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  .nav-list {
+    display: none;
+  }
+  .menu-hamburguer {
+    display: block; 
+  }
+
 }
 
 @media (max-width: 1024px) {
@@ -687,7 +775,11 @@ footer h1{
   .texto h1 {
     font-size: 30px;
   }
-
+  .mapBox {
+    width: 90%; 
+    height: auto; 
+    aspect-ratio: 16 / 9;
+}
   .texto section a {
     justify-content: center;
     display: flex;
@@ -731,11 +823,6 @@ footer h1{
   .input-group {
     flex-direction: column;
     gap: 10px;
-  }
-
-  .input-icon {
-    width: 24px;
-    height: 24px;
   }
 
   .items {
