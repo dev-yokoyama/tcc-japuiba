@@ -359,18 +359,6 @@ nav li {
   object-fit: cover;
   margin: 0 20px;
 }
-.missao-visao{
-  padding: 50px 20px;
-  background-color: #f8f8f8; 
-  font-family: 'Poppins', sans-serif;
-}
-
-.missao-visaoh1 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 40px;
-}
 
 .container {
   max-width: 1200px;
@@ -628,6 +616,15 @@ font-family: Georgia, 'Times New Roman', Times, serif;
 @media (max-width: 768px) {
   .texto h1 {
     font-size: 30px;
+  }
+  #titulo-h{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  #titulo-h::before {
+   display: none;
   }
   .input-icon{
     display: none;

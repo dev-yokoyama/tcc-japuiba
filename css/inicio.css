@@ -411,7 +411,7 @@
     padding: 20px 0; 
     box-sizing: border-box;
     position: relative; 
-    
+    flex-direction: row;
 }
 
 
@@ -627,6 +627,7 @@ footer h1{
    
   @media (max-width: 768px) {
    
+  
     .grid {
       grid-template-columns: 1fr; 
     }
@@ -809,8 +810,8 @@ footer h1{
     }
   
     .categorias img {
-      width: 100px;
-      height: 100px;
+      width: 70px;
+      height: 70px;
     }
   }
   @media (max-width: 1024px) {
