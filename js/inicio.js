@@ -45,5 +45,6 @@
       renderizarProdutos();
     }
     
+    
     mostrarProdutos();
   

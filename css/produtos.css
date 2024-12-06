@@ -565,8 +565,8 @@ border-radius: 50%;
   position: fixed;
   top: 0;
   right: 0;
-  width: 500px; /* Largura padrão para desktop */
-  height: 100vh; /* Ocupa toda a altura da tela */
+  width: 500px; 
+  height: 100vh;
   background: #ffffff;
   border-radius: 10px 0 0 10px;
   box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
@@ -575,7 +575,7 @@ border-radius: 50%;
   flex-direction: column;
   z-index: 1000;
   font-family: Arial, sans-serif;
-  transition: transform 0.3s ease; /* Adiciona animação para exibição */
+  transition: transform 0.3s ease;
 }
 
 
@@ -657,11 +657,20 @@ font-size: 40px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   #filtros {
     justify-content: center;
   }
-
+  .filtragemtotal {
+      width: 70% !important;
+      height: auto !important;
+      top: 0 !important; 
+      right: 0 !important;
+      border-radius: 0 !important; 
+  }
+  .filtraeorganizar{
+    gap: 40px;
+  }
   .filtro img {
     width: 100px;
     height: 100px;
