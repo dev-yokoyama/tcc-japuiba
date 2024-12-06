@@ -63,6 +63,8 @@ nav li {
 
   
 
+  
+
 .card-lista{
   justify-content: center;
  }
@@ -82,6 +84,82 @@ nav li {
   transition: 0.2s ease;
 
 }
+.card-lista {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center; /* Garante que os cards fiquem centralizados */
+}
+
+.card-lista .card-link {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 18px;
+  border-radius: 12px;
+  background: none;
+  border: 2px solid transparent;
+  transition: 0.2s ease;
+}
+
+.card-lista .card-link .card-imagem {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.card-lista .card-link .item {
+  color: #5372f0;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 16px 0 18px;
+  background: #DDE4FF;
+  width: fit-content;
+  border-radius: 50px;
+}
+
+.card-lista .card-link .card-titulo {
+  font-size: 1.19rem;
+  color: black;
+  font-weight: 600;
+  margin: 0; 
+}
+
+.card-lista .card-link .card-button {
+  border-radius: 50px;
+  margin: 30px 0 5px;
+  border: 2px solid #5372f0;
+  background: none;
+  color: #5372f0;
+  align-items: center;
+  padding: 10px 20px;
+  transition: ease-in-out 0.4s;
+}
+
+.card-lista .card-link:hover .card-button {
+  color: white;
+  background: #5372f0;
+}
+
+.card-lista .card-item {
+  list-style: none;
+}
+
+.card-lista .card-link:hover {
+  border-color: #5372f0;
+}
+
+/* Alinhando o h2 (ou h1) com o link */
+.card-lista .card-link h2 {
+  margin: 0;
+  text-align: center;
+}
+
 
   .card-lista .card-item .card-link{
     width: 350px;
@@ -139,7 +217,6 @@ nav li {
     gap: 40px;
   
   }
-
 .pagina {
   display: flex;
   justify-content: center;
@@ -405,6 +482,20 @@ nav li {
 }
 
 
+#menu-footer{
+  display: flex;
+  gap: 40px;
+}
+
+#mapadosite-footer{
+  font-size: 15px;
+}
+
+#marcas-footer{
+  font-size: 15px;
+}
+
+
 .mapBox {
     position: relative;
     width: 600px;
@@ -513,6 +604,7 @@ footer h1{
   font-size: 20px;
  list-style: none; 
 display: flex;
+padding: 1px;
 color: black;
 
 }
@@ -561,7 +653,7 @@ border-radius: 50%;
 }
 .filtragemtotal {
   list-style: none;
-  padding: 20px;
+  padding: 5px;
   position: fixed;
   top: 0;
   right: 0;
@@ -577,7 +669,6 @@ border-radius: 50%;
   font-family: Arial, sans-serif;
   transition: transform 0.3s ease;
 }
-
 
 
 
