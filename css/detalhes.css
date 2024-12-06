@@ -462,6 +462,18 @@ nav li {
     position: relative; 
     
 }
+#menu-footer{
+  display: flex;
+  gap: 40px;
+}
+
+#mapadosite-footer{
+  font-size: 15px;
+}
+
+#marcas-footer{
+  font-size: 15px;
+}
 
 
 .mapBox {
