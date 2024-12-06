@@ -92,3 +92,13 @@ const toggleForm = () => {
   const container = document.querySelector('.container');
   container.classList.toggle('active');
 };
+function changeButtonText() {
+  // Quando o botão for clicado, ele muda para "Enviado"
+  const button = document.getElementById("submitBtn");
+  button.value = "Enviado";
+  
+  // Opcionalmente, você pode adicionar um pequeno atraso antes de mudar de volta (simulando um envio)
+  setTimeout(() => {
+    button.value = "Enviar"; // Se desejar resetar o texto depois de 3 segundos
+  }, 3000); // Alteração após 3 segundos
+}

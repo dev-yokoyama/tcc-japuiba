@@ -669,7 +669,8 @@ font-size: 40px;
       border-radius: 0 !important; 
   }
   .filtraeorganizar{
-    gap: 40px;
+    flex-direction: column;
+    gap: 10px;
   }
   .filtro img {
     width: 100px;
