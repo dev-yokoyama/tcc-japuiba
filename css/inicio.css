@@ -872,6 +872,7 @@ footer h1{
     .input-icon{
       display: none;
     }
+
     footer {
       flex-direction: column; 
       height: auto; 

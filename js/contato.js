@@ -73,13 +73,21 @@ function toggleMenu() {
 }
 function mostrarMenu() {
   const menu = document.getElementById("menu");
+  const fundoDesfoque = document.getElementById("fundo-desfoque");
   
-  if (menu.style.display === "none" || menu.style.display === "") {
-    menu.style.display = "block"; 
-  } else {
-    menu.style.display = "none"; 
-  }
+  menu.style.display = "block";
+  fundoDesfoque.style.display = "block";
 }
+
+function fecharMenu() {
+  const menu = document.getElementById("menu");
+  const fundoDesfoque = document.getElementById("fundo-desfoque");
+  
+  menu.style.display = "none";
+  fundoDesfoque.style.display = "none";
+}
+
+
 const toggleForm = () => {
   const container = document.querySelector('.container');
   container.classList.toggle('active');

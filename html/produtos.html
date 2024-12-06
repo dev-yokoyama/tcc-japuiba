@@ -69,7 +69,7 @@
       <p>Marcar textos</p>
     </div>
     <div>
-      <img src="../img/canetas.03.png" class="filtro" data-categoria="Caneta">
+      <img  src="../img/canetas.03.png" class="filtro" data-categoria="Caneta">
       <p>Caneta</p>
     </div>
     <div>
@@ -86,15 +86,24 @@
     </div>
     <div id="menu-container">
       <div>
-      <img src="../img/Imagem do WhatsApp de 2024-12-04 à(s) 21.42.15_fdf616b7.jpg" onclick="mostrarMenu()" class="todos">
-      <p>Todos</p>
-    </div>
+        <img src="../img/Imagem do WhatsApp de 2024-12-04 à(s) 21.42.15_fdf616b7.jpg" onclick="mostrarMenu()" class="todos">
+        <p>Todos</p>
+      </div>
+      
+      <!-- Camada para o desfoque do fundo -->
+      <div id="fundo-desfoque" class="fundo-desfoque" style="display: none;" onclick="fecharMenu()"></div>
+      
       <div id="menu" class="filtragemtotal" style="display: none;">
+        <div class="filtraeorganizar">
+          <h2>Filtrar e organizar</h2>
+          <!-- Botão fechar -->
+          <i id="fechar-menu" class="bi bi-x" onclick="fecharMenu()"></i>
+        </div>
         <ul>
           <li><a href="#" class="filtro" data-categoria="Marcador">Marcadores</a></li>
           <li><a href="#" class="filtro" data-categoria="Caneta">Canetas</a></li>
           <li><a href="#" class="filtro" data-categoria="Mochila">Mochilas</a></li>
-          <li><a href="#" class="filtro" data-categoria="Lápis">Lapis</a></li>
+          <li><a href="#" class="filtro" data-categoria="Lápis">Lápis</a></li>
           <li><a href="#" class="filtro" data-categoria="Caneca">Caneca</a></li>
           <li><a href="#" class="filtro" data-categoria="Copo">Copo</a></li>
           <li><a href="#" class="filtro" data-categoria="Estojo">Estojo</a></li>

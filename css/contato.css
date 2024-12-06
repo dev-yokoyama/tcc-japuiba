@@ -388,7 +388,17 @@ section .container .user .formBx form .signup a {
   text-decoration: none;
   color: #677eff;
 }
-
+textarea{
+  background: rgb(247, 247, 247);
+  width: 450px;
+  height: 50px;
+  border: none;
+  margin-top: 10px;
+}
+textarea:focus {
+  border: none; 
+  outline: none; /* Remove o contorno de foco */
+}
 section .container .signupBx {
   pointer-events: none;
 }
